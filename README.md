@@ -1,7 +1,7 @@
 # Enable Banking for Home Assistant
 
 [![Validate](https://github.com/SurfHost/ha-enablebanking/actions/workflows/validate.yml/badge.svg)](https://github.com/SurfHost/ha-enablebanking/actions/workflows/validate.yml)
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![Open this integration in Home Assistant Marketplace](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=pschmitt&repository=homeassistant-enablebanking&category=integration)
 
 A Home Assistant custom integration that shows account balances from any bank supported by **[Enable Banking](https://enablebanking.com/)** > including ASN Bank, N26, Revolut, Openbank, and hundreds more.
 
@@ -47,14 +47,17 @@ A full walkthrough lives at [enablebanking.com/docs/api/quick-start/](https://en
 
 ## Installation
 
-### HACS (custom repository)
+For Home Assistant 2026.11 and later, use the Marketplace badge above to add
+this repository as a custom repository and install the integration.
 
-[![Add Repository to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=SurfHost&repository=ha-enablebanking&category=integration)
+### Older installations: HACS custom repository
+
+[![Add Repository to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=pschmitt&repository=homeassistant-enablebanking&category=integration)
 
 Or manually in HACS:
 
 1. HACS > three-dot menu > **Custom repositories**.
-2. Add `https://github.com/SurfHost/ha-enablebanking` with category **Integration**.
+2. Add `https://github.com/pschmitt/homeassistant-enablebanking` with category **Integration**.
 3. Search for **Enable Banking** and install it.
 4. Restart Home Assistant.
 
