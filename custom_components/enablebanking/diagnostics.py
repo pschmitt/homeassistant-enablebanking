@@ -10,7 +10,7 @@ from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
 async def async_get_config_entry_diagnostics(
     hass: HomeAssistant, config_entry: ConfigEntry
-) -> dict:
+) -> dict[str, object]:
     """Export allowlisted metadata; never include raw configuration or API data."""
     runtime = getattr(config_entry, "runtime_data", None)
     if runtime is None:
@@ -19,7 +19,7 @@ async def async_get_config_entry_diagnostics(
         runtime = runtime.get("coordinator")
     coordinator = getattr(runtime, "coordinator", runtime)
     entities = er.async_entries_for_config_entry(er.async_get(hass), config_entry.entry_id)
-    result = {
+    result: dict[str, object] = {
         "domain": config_entry.domain,
         "entry_version": config_entry.version,
         "state": config_entry.state.value,
