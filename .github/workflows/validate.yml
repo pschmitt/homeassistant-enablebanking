@@ -23,13 +23,9 @@ jobs:
           category: integration
 
   validate-hassfest:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      # Same reasoning as above. home-assistant/actions only ever tagged 1.0.0, so master
-      # is the documented ref and this SHA is master.
-      - name: Hassfest Validation
-        uses: home-assistant/actions/hassfest@e3fb68ebda13d88a0d695082f471ba2c83d025fb # master @ 2026-07-21
+    uses: pschmitt/ci-workflows/.github/workflows/home-assistant-hassfest.yaml@main
+    with:
+      legacy-action: true
 
   lint:
     runs-on: ubuntu-latest
